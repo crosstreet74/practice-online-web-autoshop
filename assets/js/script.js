@@ -1,21 +1,30 @@
 let flag = true;
 let isDark = false;
 let catalog = {
-    'vehicles': [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia', img_url: 'assets/img/catalog-kia_stinger.jpg' },
-        { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche', img_url: 'assets/img/catalog-porsche_cayenne.jpg' },
-        { type: 'Coupe', model: '4-door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg' }
+    'vehicles': [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia', img_url: 'assets/img/catalog-kia_stinger.jpg', redirect_url: '01.html' },
+        { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche', img_url: 'assets/img/catalog-porsche_cayenne.jpg', redirect_url: '02.html' },
+        { type: 'Coupe', model: 'GT 4-Door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg', redirect_url: '01.html' }
     ]
 }
 
 var x;
 for (x in catalog.vehicles) {
     doc = '<div class="catalog_item">' +
-        '<img class="catalog_img" src="' + catalog.vehicles[x].img_url + '"> <br/>' +
-        catalog.vehicles[x].brand + '<br/>' + catalog.vehicles[x].model + '<br/>' + catalog.vehicles[x].type +
+        '<img class="catalog_img" src="' +
+        catalog.vehicles[x].img_url + '"> <br/>' +
+        catalog.vehicles[x].brand + '<br/>' +
+        catalog.vehicles[x].model + '<br/>' +
+        // '<button id="item-' + x + '" >' + 'Detailed Spec</button>' +
+        '<a href="' + catalog.vehicles[x].redirect_url + '" >' + 'Detailed Spec</button>' +
         '</div>';
-
-    document.getElementById('catalog_list').innerHTML += doc;
+    let el = document.getElementById('catalog_list');
+    if (el != null)
+        el.innerHTML += doc
 }
+
+// for (x in catalog.vehicles) {
+//     document.getElementById('item-' + 'x').addEventListener();
+// }
 
 function setCar(type, model, color) {
     document.getElementById("car_type").innerHTML = type;
@@ -83,3 +92,16 @@ function setDarkTheme() {
         document.getElementsByClassName('catalog_item')[i].style.color = '#222'
     }
 }
+
+/** scripts of the page for the catalog items specification  - temporary */
+
+doc = '<div class="item_spec">' +
+    '<img class="spec_img" src="' +
+    catalog.vehicles[0].img_url + '"> <br/>' +
+    catalog.vehicles[0].brand + '<br/>' +
+    catalog.vehicles[0].model + '<br/>' +
+    '<a href="index.html">' + 'Return to Catalog</a>'
+'</div>';
+let el = document.getElementById('detailed_spec');
+if (el != null)
+    el.innerHTML += doc

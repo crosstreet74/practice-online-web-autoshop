@@ -11,6 +11,13 @@ header {
     background-color: papayawhip;
 }
 
+#motto {
+    width: 1000px;
+    height: 600px;
+    background-image: url("../img/album-bg1.jpg");
+    background-size: cover;
+}
+
 #catalog {
     background-color: thistle;
     width: 1000px;
@@ -87,4 +94,31 @@ header {
     .catalog_item {
         width: auto;
     }
+}
+
+
+/** css of the page for the catalog items specification  - temporary */
+
+#detailed_spec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 600px;
+    background-color: lightgoldenrodyellow;
+    background-size: cover;
+}
+
+.item_spec {
+    color: whitesmoke;
+    text-align: center;
+    margin: 5px 10px;
+    background-color: dimgray;
+    width: 80%;
+    transition: 0.5s
+}
+
+.spec_img {
+    margin: 10px;
+    width: 90%;
 }
