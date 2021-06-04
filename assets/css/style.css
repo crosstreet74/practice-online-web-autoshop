@@ -1,0 +1,47 @@
+body {
+    color: black;
+    background-color: white;
+    transition: 0.5s
+}
+
+header {
+    width: 1000px;
+    background-color: papayawhip;
+}
+
+#catalog {
+    background-color: thistle;
+    width: 1000px;
+    height: 200px;
+    transition: 0.5s
+}
+
+#recommend {
+    background-color: powderblue;
+    width: 1000px;
+    height: 500px;
+    transition: 0.5s
+}
+
+#car_preview {
+    display: none;
+}
+
+#car_specs {
+    display: flex;
+    flex-direction: column;
+}
+
+#spanToggleTheme {
+    color: #eee;
+    transition: 0.5s
+}
+
+#btnToggleTheme {
+    background-color: #222;
+    transition: 0.5s
+}
+
+#lightThemeIcon {
+    display: none;
+}
