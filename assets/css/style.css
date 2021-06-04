@@ -3,7 +3,7 @@ body {
     font-family: 'Merriweather';
     color: black;
     background-color: white;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 #catalog {
     background-color: thistle;
     width: 1000px;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 .catalog_item {
@@ -31,7 +31,16 @@ header {
     /* background-color: lightgoldenrodyellow; */
     background-color: dimgray;
     width: 300px;
-    transition: 0.5s
+    transition: 0.3s
+}
+
+.catalog_item:hover {
+    transform: translate(0, -5px);
+    transition: 0.3s;
+}
+
+.catalog_item:hover .tooltiptext {
+    visibility: visible;
 }
 
 .catalog_img {
@@ -39,17 +48,31 @@ header {
     width: 90%;
 }
 
+.tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 95%;
+    left: 50%;
+    margin-left: -90px;
+}
+
 #catalog_list {
     display: flex;
     justify-content: center;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 #recommend {
     background-color: powderblue;
     width: 1000px;
     height: 500px;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 #car_preview {
@@ -63,12 +86,12 @@ header {
 
 #spanToggleTheme {
     color: #eee;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 #btnToggleTheme {
     background-color: #222;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 #lightThemeIcon {
@@ -115,7 +138,7 @@ header {
     margin: 5px 10px;
     background-color: dimgray;
     width: 80%;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 .spec_img {

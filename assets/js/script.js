@@ -3,19 +3,19 @@ let isDark = false;
 let catalog = {
     'vehicles': [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia', img_url: 'assets/img/catalog-kia_stinger.jpg', redirect_url: '01.html' },
         { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche', img_url: 'assets/img/catalog-porsche_cayenne.jpg', redirect_url: '02.html' },
-        { type: 'Coupe', model: 'GT 4-Door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg', redirect_url: '01.html' }
+        { type: 'Coupe', model: 'GT 4-Door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg', redirect_url: '03.html' }
     ]
 }
 
 var x;
 for (x in catalog.vehicles) {
-    doc = '<div class="catalog_item">' +
+    doc = '<div class="catalog_item" style="position: relative;">' +
         '<img class="catalog_img" src="' +
         catalog.vehicles[x].img_url + '"> <br/>' +
         catalog.vehicles[x].brand + '<br/>' +
         catalog.vehicles[x].model + '<br/>' +
-        // '<button id="item-' + x + '" >' + 'Detailed Spec</button>' +
-        '<a href="' + catalog.vehicles[x].redirect_url + '" >' + 'Detailed Spec</button>' +
+        '<span class="tooltiptext">Click for Details</span>' +
+        '<a href="' + catalog.vehicles[x].redirect_url + '" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;">' + '</a>' +
         '</div>';
     let el = document.getElementById('catalog_list');
     if (el != null)
@@ -100,8 +100,14 @@ doc = '<div class="item_spec">' +
     catalog.vehicles[0].img_url + '"> <br/>' +
     catalog.vehicles[0].brand + '<br/>' +
     catalog.vehicles[0].model + '<br/>' +
-    '<a href="index.html">' + 'Return to Catalog</a>'
+    '<a href="index.html">' + 'Return to Main Page</a>'
 '</div>';
 let el = document.getElementById('detailed_spec');
 if (el != null)
     el.innerHTML += doc
+
+
+var myURL = window.location.pathname;
+var myUrlArr = myURL.split('/')
+var curPageName = myUrlArr[myUrlArr.length - 1]
+document.getElementById('motto_bg_url').innerHTML = curPageName
