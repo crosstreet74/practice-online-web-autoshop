@@ -105,43 +105,73 @@ header {
     header {
         width: auto;
     }
+    #motto {
+        width: auto;
+    }
     #catalog {
+        padding: 10px 0px;
         width: auto;
     }
     #recommend {
         width: auto;
     }
     #catalog_list {
+        align-items: center;
         flex-direction: column;
     }
     .catalog_item {
-        width: auto;
+        margin: 10px 0px;
+        width: 90%;
     }
 }
 
 
 /** css of the page for the catalog items specification  - temporary */
 
-#detailed_spec {
+#item_spec {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 1000px;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
     height: 600px;
     background-color: lightgoldenrodyellow;
     background-size: cover;
+    transition: 0.3s;
 }
 
-.item_spec {
+.spec_container {
+    display: flex;
     color: whitesmoke;
     text-align: center;
     margin: 5px 10px;
     background-color: dimgray;
-    width: 80%;
-    transition: 0.3s
+    width: 95%;
+}
+
+.spec_text {
+    padding: 10px 10px;
+    line-height: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .spec_img {
     margin: 10px;
-    width: 90%;
+    width: 60%;
+}
+
+@media (max-width: 800px) {
+    #item_spec {
+        height: 600px;
+        width: auto;
+    }
+    .spec_container {
+        flex-direction: column;
+    }
+    .spec_img {
+        margin: 10px;
+        width: auto;
+    }
 }

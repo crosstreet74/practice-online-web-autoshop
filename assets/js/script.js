@@ -1,9 +1,9 @@
 let flag = true;
 let isDark = false;
 let catalog = {
-    'vehicles': [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia', img_url: 'assets/img/catalog-kia_stinger.jpg', redirect_url: '01.html' },
-        { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche', img_url: 'assets/img/catalog-porsche_cayenne.jpg', redirect_url: '02.html' },
-        { type: 'Coupe', model: 'GT 4-Door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg', redirect_url: '03.html' }
+    'vehicles': [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia', img_url: 'assets/img/catalog-kia_stinger.jpg', redirect_url: '1.html', price: '38.5 million ₩~', mileage: '9-11 km/l' },
+        { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche', img_url: 'assets/img/catalog-porsche_cayenne.jpg', redirect_url: '2.html', price: '112.2 million ₩~', mileage: '6-7 km/l' },
+        { type: 'Coupe', model: 'GT 4-Door Coupe', brand: 'Mercedes-Benz', img_url: 'assets/img/catalog-mercedes_benz_4door_coupe.jpg', redirect_url: '3.html', price: '100.4 million ₩~', mileage: '8-9 km/l' }
     ]
 }
 
@@ -93,21 +93,27 @@ function setDarkTheme() {
     }
 }
 
-/** scripts of the page for the catalog items specification  - temporary */
 
-doc = '<div class="item_spec">' +
-    '<img class="spec_img" src="' +
-    catalog.vehicles[0].img_url + '"> <br/>' +
-    catalog.vehicles[0].brand + '<br/>' +
-    catalog.vehicles[0].model + '<br/>' +
-    '<a href="index.html">' + 'Return to Main Page</a>'
-'</div>';
-let el = document.getElementById('detailed_spec');
-if (el != null)
-    el.innerHTML += doc
-
+/** scripts to practice windows.location.pathname - temporary */
 
 var myURL = window.location.pathname;
 var myUrlArr = myURL.split('/')
-var curPageName = myUrlArr[myUrlArr.length - 1]
-document.getElementById('motto_bg_url').innerHTML = curPageName
+var pageFileName = myUrlArr[myUrlArr.length - 1]
+var id = pageFileName.split('.')[0]
+
+/** scripts of the page for the catalog items specification  - temporary */
+
+let el = document.getElementById('item_spec');
+if (el != null) {
+    doc = '<div class="spec_container">' +
+        '<img class="spec_img" src="' + catalog.vehicles[id - 1].img_url + '"> <br/>' +
+        '<div class="spec_text">' +
+        'Brand: ' + catalog.vehicles[id - 1].brand + '<br/>' +
+        'Model: ' + catalog.vehicles[id - 1].model + '<br/>' +
+        'Price: ' + catalog.vehicles[id - 1].price + '<br/>' +
+        'Mileage: ' + catalog.vehicles[id - 1].mileage + '<br/>' +
+        '</div>' +
+        '</div>' +
+        '<a href="index.html">Return to Main Page</a>';
+    el.innerHTML += doc
+}
