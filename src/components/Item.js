@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import "@material-ui/core";
 
 export default function Item(props) {
     let [value, setValue] = useState(0);
