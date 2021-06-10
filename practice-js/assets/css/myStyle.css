@@ -1,0 +1,127 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#brand {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.head {
+    background-color: floralwhite;
+    height: 75px;
+    width: auto;
+    margin: auto;
+}
+
+.brandImage {
+    text-align: center;
+    /* 우측정렬, 크기 줄이기,  */
+    color: slateblue;
+}
+
+.featTitle {
+    font-size: 2rem;
+}
+
+#deal .title h3{
+    font-size: 2rem;
+    color: coral;
+}
+
+#deal ul li {
+    padding-right: 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#deal ul li:last-child{
+    padding-right: 0px;
+}
+
+.modelImg {
+    width:100%;
+    height:400px;
+    background-color: slategray;
+}
+.modelTitle{
+    font-size: 1.4rem;
+    text-align: center;
+}
+.modelBrand{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.modelRate{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.modelDealPrice{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.modelDealPrice span{
+    text-decoration: line-through;
+    color:lightgray;
+    font-size: 1.1rem;    
+}
+
+.blogIntro{
+    text-align: center;
+}
+#blog{
+    text-align: center;
+}
+
+.blogText{
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 12.5%;
+    width:70%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid none dimgray;
+    text-align: center;
+}
+
+#blog .blogImage{
+    background-color: lightgray;
+    width: 90%;
+    height: 300px;
+    margin: 5%;
+}
+
+#blog .blogTitle{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 10px;
+    color:darkgoldenrod;
+}
+
+#blog .blogAuth{
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.footer{
+    color:lightgray;
+    background-color: dimgray;
+    height:400px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.footer ul{
+    padding-left: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration: underline;
+}

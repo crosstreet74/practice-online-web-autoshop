@@ -1,0 +1,4 @@
+catalog: [{ type: 'Sports Sedan', model: 'Stinger', brand: 'Kia' },
+    { type: 'Sports Utility', model: 'Cayenne', brand: 'Porsche' },
+    { type: 'Coupe', model: '4-door Coupe', brand: 'Mercedes-Benz' }
+];
