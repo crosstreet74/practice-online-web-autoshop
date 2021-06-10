@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "type": "Sports Sedan",
+            "type": "Sedan",
             "model": "Stinger",
             "brand": "Kia",
             "price": "38.5",
@@ -11,7 +11,7 @@
             "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
-            "type": "Sports Utility",
+            "type": "Sports Car",
             "model": "Cayenne",
             "brand": "Porsche",
             "price": "112.2",
@@ -31,7 +31,7 @@
             "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
-            "type": "Crossover SUV",
+            "type": "Utility SUV",
             "model": "Renegade Longitude",
             "brand": "Jeep",
             "price": "36.1",
@@ -44,9 +44,19 @@
             "type": "Luxury SUV",
             "model": "Range Rover",
             "brand": "Land Rover",
-            "price": "189",
+            "price": "10.6",
             "discount": 10,
             "mileage": "9-10 km/l",
+            "rating": 2,
+            "item_img": "../img/catalog-kia_stinger.jpg"
+        },
+        {
+            "type": "Subcompact City",
+            "model": "Chevrolet Spark",
+            "brand": "General Motors",
+            "price": "36.1",
+            "discount": 10,
+            "mileage": "18 km/l",
             "rating": 2,
             "item_img": "../img/catalog-kia_stinger.jpg"
         }

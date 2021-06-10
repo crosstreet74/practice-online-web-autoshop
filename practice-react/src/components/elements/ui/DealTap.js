@@ -1,8 +1,8 @@
 import Category from "../../../assets/data/category.json"
 
-export default function DealTap() {
+export default function DealTap({setCategory}) {
     const handleClick = (e) => {
-        console.log(e.target)
+        setCategory(e.target.value)
     }
 
     return (
@@ -11,7 +11,7 @@ export default function DealTap() {
                 {
                     Category.item.map(item =>
                         <li>
-                            <button onClick={handleClick}>
+                            <button onClick={handleClick} value={item.name}>
                                 {item.name}
                             </button>
                         </li>
