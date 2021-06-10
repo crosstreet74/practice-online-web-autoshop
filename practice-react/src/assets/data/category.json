@@ -1,0 +1,20 @@
+{
+    "item": [
+        {
+            "id": 1,
+            "name": "Micro Car"
+        },
+        {
+            "id": 2,
+            "name": "Sedan"
+        },
+        {
+            "id": 3,
+            "name": "SUV"
+        },
+        {
+            "id": 4,
+            "name": "Sports Car"
+        }
+    ]
+}

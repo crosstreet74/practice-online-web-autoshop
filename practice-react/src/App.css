@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body{
+  font-family: 'Roboto Mono'; 
+}
+.catalogItem{
+  padding:0 10px;
+  margin: 20px 30px;
+  background-color: cornsilk;
+  width: 300px;
+  height: 200px;
+}
