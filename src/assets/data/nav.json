@@ -1,0 +1,19 @@
+{
+    "menu":[
+        {
+            "id": 1,
+            "name": "About",
+            "url": "/about"
+        },
+        {
+            "id": 2,
+            "name": "Catalog",
+            "url": "/catalog"
+        },
+        {
+            "id": 3,
+            "name": "FAQs",
+            "url": "/FAQs"
+        }
+    ]
+}

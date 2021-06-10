@@ -1,18 +1,19 @@
-// import logo from "./logo.svg"
-import "./App.css";
-import Header from "./components/Header.js"
-import Navi from "./components/Navi.js"
-import Catalog from "./components/Catalog.js"
-import Preview from "./components/Preview.js"
+import 'bootstrap/dist/css/bootstrap.css'
 import React, { Fragment } from "react";
+
+import "./assets/css/carousel.css";
+import "./assets/css/myStyle.css";
+
+import Header from "./components/layout/Header";
+import Main from "./components/layout/Main";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
     <Fragment>
-      <Header name="ACompany"></Header>
-      <Navi></Navi>
-      <Catalog></Catalog>
-      <Preview></Preview>
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
     </Fragment>
   );
 }

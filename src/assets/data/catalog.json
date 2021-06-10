@@ -1,39 +1,54 @@
 {
-    "items": [
+    "item": [
         {
             "type": "Sports Sedan",
             "model": "Stinger",
             "brand": "Kia",
-            "price": "38.5 million ₩~",
-            "mileage": "9-11 km/l"
+            "price": "38.5",
+            "discount": 10,
+            "mileage": "9-11 km/l",
+            "rating": 5,
+            "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
             "type": "Sports Utility",
             "model": "Cayenne",
             "brand": "Porsche",
-            "price": "112.2 million ₩~",
-            "mileage": "6-7 km/l"
+            "price": "112.2",
+            "discount": 10,
+            "mileage": "6-7 km/l",
+            "rating": 4,
+            "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
             "type": "Coupe",
             "model": "GT 4-Door Coupe",
             "brand": "Mercedes-Benz",
-            "price": "100.4 million ₩~",
-            "mileage": "8-9 km/l"
+            "price": "100.4",
+            "discount": 10,
+            "mileage": "8-9 km/l",
+            "rating": 5,
+            "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
             "type": "Crossover SUV",
             "model": "Renegade Longitude",
             "brand": "Jeep",
-            "price": "36.1 million ₩~",
-            "mileage": "9-10 km/l"
+            "price": "36.1",
+            "discount": 10,
+            "mileage": "9-10 km/l",
+            "rating": 3,
+            "item_img": "../img/catalog-kia_stinger.jpg"
         },
         {
             "type": "Luxury SUV",
             "model": "Range Rover",
             "brand": "Land Rover",
-            "price": "189 million ₩~",
-            "mileage": "9-10 km/l"
+            "price": "189",
+            "discount": 10,
+            "mileage": "9-10 km/l",
+            "rating": 2,
+            "item_img": "../img/catalog-kia_stinger.jpg"
         }
     ]
 }
