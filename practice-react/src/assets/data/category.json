@@ -20,5 +20,50 @@
             "id": 5,
             "name": "Coupe"
         }
+    ],
+    
+    "brand": [
+        {
+            "id": 1,
+            "name": "Kia",
+            "img": "fas fa-star",
+            "content": "기아"
+        },
+        {
+            "id": 2,
+            "name": "Hyundai",
+            "img": "fab fa-apple",
+            "content": "현대"
+        },
+        {
+            "id": 3,
+            "name": "Chevrolet",
+            "img": "fab fa-blogger",
+            "content": "쉐보레"
+        },
+        {
+            "id": 4,
+            "name": "Porsche",
+            "img": "fab fa-battle-net",
+            "content": "포르쉐"
+        },
+        {
+            "id": 5,
+            "name": "Jeep",
+            "img": "fab fa-artstation",
+            "content": "지프"
+        },
+        {
+            "id": 6,
+            "name": "Land Rover",
+            "img": "fab fa-angular",
+            "content": "랜드 로버"
+        },
+        {
+            "id": 5,
+            "name": "Mercedes-Benz",
+            "img": "fab fa-airbnb",
+            "content": "메르세데스-벤츠"
+        }
     ]
 }

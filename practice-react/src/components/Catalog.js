@@ -6,9 +6,9 @@ export default function Catalog() {
     return (
         <Fragment>
             {
-                data.items.map(item => {
+                data.items.map((item,index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <img src={item.img_url}></img>
                             <p>{item.brand}</p>
                             <p>{item.model}</p>

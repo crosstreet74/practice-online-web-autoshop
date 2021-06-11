@@ -1,0 +1,68 @@
+{
+    "about": [
+        {
+            "id": 1,
+            "name": "About us",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "name": "Store location",
+            "url": "/about"
+        },
+        {
+            "id": 3,
+            "name": "Contacts",
+            "url": "/catalog"
+        },
+        {
+            "id": 4,
+            "name": "Orders tracking",
+            "url": "/faqs"
+        }
+    ],
+    "links": [
+        {
+            "id": 1,
+            "name": "Returns",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "name": "Support Policy",
+            "url": "/about"
+        },
+        {
+            "id": 3,
+            "name": "Size Guide",
+            "url": "/catalog"
+        },
+        {
+            "id": 4,
+            "name": "FAQs",
+            "url": "/faqs"
+        }
+    ],
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Facebook",
+            "url": "/"
+        },
+        {
+            "id": 2,
+            "name": "Twitter",
+            "url": "/about"
+        },
+        {
+            "id": 3,
+            "name": "Instagram",
+            "url": "/catalog"
+        },
+        {
+            "id": 4,
+            "name": "Youtube",
+            "url": "/faqs"
+        }
+    ]
+}

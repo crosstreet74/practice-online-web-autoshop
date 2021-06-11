@@ -2,18 +2,23 @@
     "menu":[
         {
             "id": 1,
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "id": 2,
             "name": "About",
             "url": "/about"
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "Catalog",
             "url": "/catalog"
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "FAQs",
-            "url": "/FAQs"
+            "url": "/faqs"
         }
     ]
 }

@@ -1,13 +1,24 @@
+import { useState } from "react"
+import data from "../../../../assets/data/category.json"
+
 export default function CardBrand() {
-    return (
-        <div className="col-12 col-md-3">
-            <div className="row ">
-                <div className="brandImage col-12 col-md-4"><i className="fas fa-car fa-3x"></i></div>
-                <div className="col-12 col-md-auto">
-                    <p className="featTitle">first sentence</p>
-                    <p>second sentence</p>
+    const [brandData, setBrandList] = useState(data)
+
+    const brandList = brandData.brand.map(item => {
+
+        return (
+            <div className="col-12 col-md-3">
+                <div className="row ">
+                    <div className="brandImage col-12 col-md-4"><i className={`${item.img} fa-5x`}></i></div>
+                    <div className="col-12 col-md-auto">
+                        <p className="featTitle">{item.name}</p>
+                        <p>{item.content}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        )
+    });
+    return (
+        brandList
     )
 }

@@ -11,7 +11,7 @@ export default function Deal() {
         <section id="deal">
             <div className="container">
                 <DealTitle></DealTitle>
-                <DealTap setCategory={setCategory}></DealTap>
+                <DealTap category= {category} setCategory={setCategory}></DealTap>
                 <CardItem category={category}></CardItem>
             </div>
         </section>

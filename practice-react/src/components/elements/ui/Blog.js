@@ -8,8 +8,6 @@ export default function Blog() {
                 <BlogTitle></BlogTitle>
                 <div className="row">
                     <CardBlog></CardBlog>
-                    <CardBlog></CardBlog>
-                    <CardBlog></CardBlog>
                 </div>
             </div>
         </section>

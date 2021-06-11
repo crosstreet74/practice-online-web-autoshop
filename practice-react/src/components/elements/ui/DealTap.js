@@ -1,6 +1,7 @@
 import Category from "../../../assets/data/category.json"
 
-export default function DealTap({setCategory}) {
+export default function DealTap({category, setCategory}) {
+
     const handleClick = (e) => {
         setCategory(e.target.value)
     }
@@ -9,9 +10,11 @@ export default function DealTap({setCategory}) {
         <div id="dealNav" className="row mb-5">
             <ul className="col-12 col-md-6 offset-md-3 nav justify-content-center text-center">
                 {
-                    Category.item.map(item =>
-                        <li>
-                            <button onClick={handleClick} value={item.name}>
+                    Category.item.map((item,index) =>
+                        <li key={index}>
+                            <button 
+                            // {active ? "nav-link active" : "nav-link"}
+                            onClick={handleClick} value={item.name}>
                                 {item.name}
                             </button>
                         </li>

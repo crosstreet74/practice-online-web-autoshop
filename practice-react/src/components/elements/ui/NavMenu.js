@@ -1,14 +1,17 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import menuData from "../../../assets/data/nav.json"
 
 export default function NavMenu() {
-    const menuList = menuData.menu.map(item =>
+    const menuList = menuData.menu.map((item, index) =>
 
-        <li className="nav-link"><a href={item.url}>{item.name}</a></li>
+        <li key={index} className="nav-link">
+                <Link to={item.url}>{item.name}</Link>
+        </li >
     )
 
     return (
-        <ul className="nav col-12 offset-lg-4 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 px-2">
+        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             {menuList}
         </ul>
     )

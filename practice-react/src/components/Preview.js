@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Preview(props) {
   let [input, setInput] = useState('');
   function handleSubmit(e) {
-    console.log(e.target.name)
+    ;
   }
   return (
     <section>
