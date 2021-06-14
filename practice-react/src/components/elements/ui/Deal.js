@@ -5,12 +5,12 @@ import { useState } from "react"
 
 export default function Deal() {
 
-    const [category, setCategory] = useState("Sedan")
+    const [category, setCategory] = useState("cakes")
 
     return (
         <section id="deal">
             <div className="container">
-                <DealTitle></DealTitle>
+                <DealTitle title = "Hot Deal"/>
                 <DealTap category= {category} setCategory={setCategory}></DealTap>
                 <CardItem category={category}></CardItem>
             </div>

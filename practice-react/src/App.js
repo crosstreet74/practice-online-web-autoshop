@@ -13,12 +13,14 @@ import "./assets/icons8/css/line-awesome.min.css";
 import Home from './components/pages/Home/Home';
 import About from './components/pages/About/About';
 import Deal from './components/elements/ui/Deal';
+import ItemDetail from './components/elements/widgets/deal/ItemDetail';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/"><Home/></Route>
+        <Route exact path="/product/:id"><ItemDetail/></Route>
         <Route exact path="/about"><About/></Route>
         <Route exact path="/catalog"><Deal/></Route>
         <Route exact path="/faqs"></Route>

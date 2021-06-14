@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import footerMenuData from "../../../../assets/data/footerMenu.json"
 
 export default function FooterMenu({ footerGroup,
     footerMenuList
@@ -8,9 +7,9 @@ export default function FooterMenu({ footerGroup,
     /* using json data from props */
 
     const [newList, setNewList] = useState(footerMenuList);
-    console.log(newList)
-    const menuList = newList.map(item => (
-        <li key={item.id}>{item.name}</li>
+    // console.log(newList)
+    const menuList = newList.map((item, id) => (
+        <li key={id}>{item.name}</li>
     ))
 
     /* using only string to filter the json data read from component'FooterMenu' level */

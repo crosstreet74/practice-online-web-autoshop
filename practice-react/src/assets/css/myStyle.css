@@ -27,12 +27,15 @@ body {
 }
 
 .featTitle {
-    font-size: 2rem;
-}
+    font-size: 1.5rem;
+} 
+
+/* Section id deal */
 
 #deal .title h3{
     font-size: 2rem;
-    color: coral;
+    color:coral;
+    text-align: center;
 }
 
 #deal ul li {
