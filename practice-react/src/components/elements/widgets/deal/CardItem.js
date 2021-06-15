@@ -28,7 +28,7 @@ export default function CardItem({ category }) {
     const itemList = filteredData.map((item, index) => {
         return (
             <div key={index} className="col-12 col-md-3 mb-4">
-                <Link to={`/product/${item.id}`}>
+                <Link to={`/productdetail/${item.id}`}>
                     <img className="modelImg mb-3" style={{ backgroundImage: `url(${item.item_img})`, backgroundSize: "cover", backgroundPositionX: "center" }}></img>
                     <p className="modelTitle mb-1">{item.name}</p>
                 </Link>

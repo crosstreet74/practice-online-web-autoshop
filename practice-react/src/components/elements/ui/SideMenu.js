@@ -57,8 +57,8 @@ export default function SideMenu() {
                 
                 {/* sidemenu-cart */}
                 <div className="same-style cart-wrap d-none d-lg-block">
-                    <button className="icon-cart"><i className="las la-shopping-bag"></i><span
-                        className="count-style">0</span></button>
+                    <a className="icon-cart" href="/cart" ><i className="las la-shopping-bag"></i><span
+                        className="count-style">0</span></a>
                     <div className="shopping-cart-content">
                         <p className="text-center">No items added to cart</p>
                     </div>
