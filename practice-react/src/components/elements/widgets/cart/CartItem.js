@@ -1,111 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function CartItem() {
-    return ( 
+
+    const [cartData, setCartData] = useState([]);
+    let process = require('../../../../assets/config/myProcess.json')
+
+    useEffect(() => {
+        fetch(`http://${process.IP}:${process.PORT}/cart`)
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setCartData(data)
+            })
+    })
+
+    const cartList = cartData.map(item => {
+        return (
+            <tr>
+                <td className="product-thumbnail">
+                    <a href="/product/2"><img className="img-fluid" src="assets/img/product/fashion/2.jpg" alt="" /></a>
+                </td>
+                <td className="product-name">
+                    <a href="/product/2">Lorem ipsum coat</a>
+                    <div className="cart-item-variation">
+                        <span>Color: blue</span>
+                        <span>Size: x</span>
+                    </div>
+                </td>
+                <td className="product-price-cart">
+                    <span className="amount old">$18.50</span>
+                    <span className="amount">$15.72</span>
+                </td>
+                <td className="product-quantity">
+                    <div className="cart-plus-minus">
+                        <button className="dec qtybutton">-</button>
+                        <input className="cart-plus-minus-box" type="text" readonly="" value="1" />
+                        <button className="inc qtybutton">+</button>
+                    </div>
+                </td>
+                <td className="product-subtotal">$15.72</td>
+                <td className="product-remove"><button><i className="fa fa-times"></i></button></td>
+            </tr>
+        )
+    })
+
+    return (
         <tbody>
-
-            <tr>
-                <td class="product-thumbnail">
-                    <a href="/product/2"><img class="img-fluid" src="assets/img/product/fashion/2.jpg" alt="" /></a>
-                </td>
-                <td class="product-name">
-                    <a href="/product/2">Lorem ipsum coat</a>
-                    <div class="cart-item-variation">
-                        <span>Color: blue</span>
-                        <span>Size: x</span>
-                    </div>
-                </td>
-                <td class="product-price-cart">
-                    <span class="amount old">$18.50</span>
-                    <span class="amount">$15.72</span>
-                </td>
-                <td class="product-quantity">
-                    <div class="cart-plus-minus">
-                        <button class="dec qtybutton">-</button>
-                        <input class="cart-plus-minus-box" type="text" readonly="" value="1" />
-                        <button class="inc qtybutton">+</button>
-                    </div>
-                </td>
-                <td class="product-subtotal">$15.72</td>
-                <td class="product-remove"><button><i class="fa fa-times"></i></button></td>
-            </tr>
-
-            <tr>
-                <td class="product-thumbnail"><a href="/product/2"><img class="img-fluid" src="assets/img/product/fashion/2.jpg" alt="" /></a></td>
-                <td class="product-name">
-                    <a href="/product/2">Lorem ipsum coat</a>
-                    <div class="cart-item-variation">
-                        <span>Color: blue</span>
-                        <span>Size: m</span>
-                    </div>
-                </td>
-                <td class="product-price-cart">
-                    <span class="amount old">$18.50</span>
-                    <span class="amount">$15.72</span>
-                </td>
-                <td class="product-quantity">
-                    <div class="cart-plus-minus">
-                        <button class="dec qtybutton">-</button>
-                        <input class="cart-plus-minus-box" type="text" readonly="" value="2" />
-                        <button class="inc qtybutton">+</button>
-                    </div>
-                </td>
-                <td class="product-subtotal">$31.44</td>
-                <td class="product-remove">
-                    <button><i class="fa fa-times"></i></button>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="product-thumbnail"><a href="/product/3"><img class="img-fluid" src="assets/img/product/fashion/3.jpg" alt="" /></a></td>
-                <td class="product-name">
-                    <a href="/product/3">Lorem ipsum jacket</a>
-                    <div class="cart-item-variation">
-                        <span>Color: white</span>
-                        <span>Size: x</span>
-                    </div>
-                </td>
-                <td class="product-price-cart">
-                    <span class="amount old">$17.45</span>
-                    <span class="amount">$10.47</span>
-                </td>
-                <td class="product-quantity">
-                    <div class="cart-plus-minus">
-                        <button class="dec qtybutton">-</button>
-                        <input class="cart-plus-minus-box" type="text" readonly="" value="1" />
-                        <button class="inc qtybutton">+</button>
-                    </div>
-                </td>
-                <td class="product-subtotal">$10.47</td>
-                <td class="product-remove">
-                    <button><i class="fa fa-times"></i></button>
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="product-thumbnail"><a href="/product/4"><img class="img-fluid" src="assets/img/product/fashion/4.jpg" alt="" /></a></td>
-                <td class="product-name">
-                    <a href="/product/4">Lorem ipsum fashion coat</a>
-                    <div class="cart-item-variation">
-                        <span>Color: blue</span>
-                        <span>Size: x</span>
-                    </div>
-                </td>
-                <td class="product-price-cart">
-                    <span class="amount">$15.50</span>
-                </td>
-                <td class="product-quantity">
-                    <div class="cart-plus-minus">
-                        <button class="dec qtybutton">-</button>
-                        <input class="cart-plus-minus-box" type="text" readonly="" value="1" />
-                        <button class="inc qtybutton">+</button>
-                    </div>
-                </td>
-                <td class="product-subtotal">$15.50</td>
-                <td class="product-remove">
-                    <button><i class="fa fa-times"></i></button>
-                </td>
-            </tr>
+            {cartList}
         </tbody>
     );
 }

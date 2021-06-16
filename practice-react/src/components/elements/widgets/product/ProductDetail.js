@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import Header from '../../../layout/Header';
 import Footer from '../../../layout/Footer';
 import Bread from '../../ui/Bread'
-import ProductTop from '../product/ProductTop'
-import ProductBottom from '../product/ProductBottom'
+import ProductTop from './ProductTop'
+import ProductBottom from './ProductBottom'
 
 export default function ItemDetail() {
 
@@ -27,6 +27,7 @@ export default function ItemDetail() {
             <Header />
             <h3 className="text-center my-5">{productData.name}</h3>
             <Bread
+                breadName={productData.name}
                 productId={productData.id}
                 productName={productData.name}
                 productUrl={`/productdetail/${productData.id}`}

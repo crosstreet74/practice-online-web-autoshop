@@ -1,8 +1,8 @@
-import React from 'react';
-import CartOption from "../../ui/CartOption"
+import React, { useState } from 'react';
 import CartItem from "../../widgets/cart/CartItem"
 
-export default function CartBox() {
+export default function CartTable() {
+    const [cartData, setCartData] = useState([])
     return (
         <div class="cart-main-area pt-90 pb-100">
             <div class="container">
@@ -21,12 +21,11 @@ export default function CartBox() {
                                         <th>action</th>
                                     </tr>
                                 </thead>
-                                <CartItem></CartItem>
+                                {/* <CartItem></CartItem> */}
                             </table>
                         </div>
                     </div>
                 </div>
-                <CartOption></CartOption>
             </div>
         </div>
     );

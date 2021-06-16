@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../layout/Header';
 import Bread from '../../elements/ui/Bread';
-import CartBox from '../../elements/widgets/cart/CartBox';
+import CartTable from '../../elements/widgets/cart/CartTable';
 import Footer from '../../layout/Footer';
 
 export default function Cart() {
@@ -9,7 +9,7 @@ export default function Cart() {
         <div>
             <Header />
             <Bread breadName="CART" />
-            <CartBox />
+            <CartTable />
             <Footer />
         </div>
     );

@@ -1,12 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductOption from './ProductOption';
 import { useParams } from 'react-router-dom';
+
+import ProductAdd from './ProductAdd'
 
 export default function ProductDetailMid() {
     var process = require("../../../../assets/config/myProcess.json");
 
     const { id } = useParams();
-    const [ varData, setVardata ] = useState([]);
+    const [varData, setVardata] = useState([]);
+    const [color, setColor] = useState('');
+    const [size, setSize] = useState('');
 
 
     useEffect(() => {
@@ -16,38 +20,18 @@ export default function ProductDetailMid() {
             })
             .then(data => {
                 setVardata(data);
-                console.log(data.variation);
+                // console.log(data.variation);
             });
     }, [process.IP, process.PORT, id]);
-    
+
     return (
         <>
             <ProductOption
                 vData={varData.variation}
+                setColor={setColor}
+                setSize={setSize}
             />
-            <div className="pro-details-quality">
-                <div className="cart-plus-minus">
-                    <button className="dec qtybutton">-</button>
-                    <input className="cart-plus-minus-box" type="text" readOnly=""></input>
-                    <button className="inc qtybutton">+</button>
-                </div>
-                <div className="pro-details-cart btn-hover">
-                    <button> Add To Cart </button>
-                </div>
-                <div className="pro-details-cart btn-hover ml-0">
-                    <a href="//www.amazon.com" rel="noopener noreferrer" target="_blank">Buy Now</a>
-                </div>
-                <div className="prodetails-wishlist">
-                    <button className="" title="Add to wishlist">
-                        <i className="las la-bookmark"></i>
-                    </button>
-                </div>
-                <div className="pro-details-compare">
-                    <button className="" title="Add to compare">
-                        <i className="las la-random"></i>
-                    </button>
-                </div>
-            </div>
+            <ProductAdd data={varData} size={size} color={color}/>
         </>
     );
 }

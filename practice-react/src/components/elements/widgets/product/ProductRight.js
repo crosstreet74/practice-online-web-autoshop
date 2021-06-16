@@ -17,7 +17,7 @@ export default function ProductRight() {
             })
             .then(data => {
                 setDatas(data);
-                console.log(data);
+                // console.log(data);
             });
     }, []);
 

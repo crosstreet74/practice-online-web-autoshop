@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../../layout/Header';
 import Bread from '../../elements/ui/Bread';
-import WishBox from '../../elements/ui/WishBox';
+import WishTable from '../../elements/ui/WishTable';
 import Footer from '../../layout/Footer';
 
-export default function Wishlist(props) {
+export default function Wishlist() {
     return (
         <>
             <Header />
             <h3 className="text-center my-5"></h3>
             <Bread breadName="WISHLIST" />
-            <WishBox />
+            <WishTable />
             <Footer></Footer>
         </>
     );
