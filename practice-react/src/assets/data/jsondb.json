@@ -68,8 +68,8 @@
     },
     {
       "id": 3,
-      "name": "Pricing",
-      "url": "/pricing"
+      "name": "Shop",
+      "url": "/shop"
     },
     {
       "id": 4,
@@ -116,6 +116,10 @@
   ],
   "category": [
     {
+      "id": 0,
+      "name": "all category"
+    },
+    {
       "id": 1,
       "name": "fashion"
     },
@@ -129,7 +133,31 @@
     },
     {
       "id": 4,
-      "name": "boy"
+      "name": "electronics"
+    },
+    {
+      "id": 5,
+      "name": "plant"
+    },
+    {
+      "id": 6,
+      "name": "organic food"
+    },
+    {
+      "id": 7,
+      "name": "flower"
+    },
+    {
+      "id": 8,
+      "name": "book"
+    },
+    {
+      "id": 9,
+      "name": "cosmetics"
+    },
+    {
+      "id": 10,
+      "name": "accessories"
     }
   ],
   "brand": [

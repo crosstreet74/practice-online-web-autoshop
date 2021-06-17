@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 
-export default function ProductOption({ setColor, setSize }) {
 
+export default function ProductOption({ setColor, setSize }) {
+    // TODO: set default selected color/size input 
     const { id } = useParams();
     const [vData, setVData] = useState([])
-    const [selectedColor, setSelectedColor] = useState('')
     const [sizeData, setSizeData] = useState([])
+    const [selectedColor, setSelectedColor] = useState('')
+    const [selectedSize, setSelectedSize] = useState('')
 
     let process = require('../../../../assets/config/myProcess.json')
     useEffect(() => {
@@ -15,7 +17,7 @@ export default function ProductOption({ setColor, setSize }) {
                 return res.json()
             }).then(data => {
                 setVData(data.variation)
-                // setSelectedColor(data.variation[0].color)
+                setSelectedColor(data.variation[0].color)
                 setSizeData(data.variation[0].size)
             })
     }, [])
@@ -25,7 +27,11 @@ export default function ProductOption({ setColor, setSize }) {
         for (let i = 0; i < vData.length; i++)
             if (vData[i].color == color)
                 setSizeData(vData[i].size)
-            console.log(sizeData)
+        // console.log(sizeData)
+    }
+
+    const handleSizeSelection = (size) => {
+        setSize(size)
     }
 
     return (
@@ -51,7 +57,7 @@ export default function ProductOption({ setColor, setSize }) {
                         sizeData.map(item => {
                             return (
                                 <label className="pro-details-size-content--single">
-                                    <input type="radio" value={item.name} />
+                                    <input type="radio" value={item.name} onClick={() => { setSelectedSize(item.name)}} />
                                     <span className="size-name">{item.name}</span>
                                 </label>
                             )

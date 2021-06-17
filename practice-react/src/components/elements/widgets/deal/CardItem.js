@@ -89,7 +89,7 @@ export default function CardItem({ category }) {
         <div className="col-xl-3 col-md-6 col-lg-3 col-sm-6 " key={item.id}>
             <div className="product-wrap mb-25">
                 <div className="product-img">
-                    <Link to={`/productdetail/${item.id}`}>
+                    <Link to={`/products/${item.id}`}>
                         <img className="default-img" src="assets/img/product/fashion/8.jpg" alt="" />
                         <img className="hover-img" src="/assets/img/product/fashion/6.jpg" alt="" />
                     </Link>
@@ -127,7 +127,7 @@ export default function CardItem({ category }) {
                     </div>
                 </div>
                 <div className="product-content text-center">
-                    <h3><Link to={`/productdetail/${item.id}`}>{item.name}</Link></h3>
+                    <h3><Link to={`/products/${item.id}`}>{item.name}</Link></h3>
                     <div className="product-rating">
                         {item.rating && item.rating > 0 ? (
                             <ProductRating rateValue={item.rating} />
@@ -136,8 +136,8 @@ export default function CardItem({ category }) {
                         )}
                     </div>
                     <div className="product-price">
-                        <span>{item.price}</span>
-                        <span className="old">{(item.price * ((100 + item.discount) / 100)).toFixed(2)}</span>
+                        <span>{(item.price * ((100 + item.discount) / 100)).toFixed(2)}</span>
+                        <span className="old">{item.price}</span>
                     </div>
                 </div>
             </div>

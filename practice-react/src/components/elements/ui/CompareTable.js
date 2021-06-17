@@ -28,12 +28,12 @@ export default function CompareTable() {
                 <div className="compare-remove">
                     <button onClick={()=>{handleCompareRm(item.id)}}><i className="las la-trash"></i></button>
                 </div>
-                <Link className="image" to={`/product/${item.id}`}><img className="img-fluid" src={item.image} alt="" /></Link>
+                <Link className="image" to={`/products/${item.id}`}><img className="img-fluid" src={item.image} alt="" /></Link>
                 <div className="product-title">
-                    <Link to={`/product/${item.id}`}></Link>
+                    <Link to={`/products/${item.id}`}></Link>
                 </div>
                 <div className="compare-btn">
-                    <Link to={`/product/${item.id}`}>Select Option</Link>
+                    <Link to={`/products/${item.id}`}>Select Option</Link>
                 </div>
             </td>
         )

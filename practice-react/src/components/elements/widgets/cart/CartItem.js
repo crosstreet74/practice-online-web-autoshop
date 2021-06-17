@@ -12,17 +12,18 @@ export default function CartItem() {
             })
             .then(data => {
                 setCartData(data)
+                console.log(cartData)
             })
-    })
+    },[])
 
     const cartList = cartData.map(item => {
         return (
-            <tr>
+            <tr key={item.id}>
                 <td className="product-thumbnail">
                     <a href="/product/2"><img className="img-fluid" src="assets/img/product/fashion/2.jpg" alt="" /></a>
                 </td>
                 <td className="product-name">
-                    <a href="/product/2">Lorem ipsum coat</a>
+                    <a href="/product/2">{item.name}</a>
                     <div className="cart-item-variation">
                         <span>Color: blue</span>
                         <span>Size: x</span>
@@ -35,7 +36,7 @@ export default function CartItem() {
                 <td className="product-quantity">
                     <div className="cart-plus-minus">
                         <button className="dec qtybutton">-</button>
-                        <input className="cart-plus-minus-box" type="text" readonly="" value="1" />
+                        <input className="cart-plus-minus-box" type="text" readOnly="" value="1" />
                         <button className="inc qtybutton">+</button>
                     </div>
                 </td>

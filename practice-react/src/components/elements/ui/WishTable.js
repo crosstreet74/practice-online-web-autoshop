@@ -36,10 +36,10 @@ export default function WishTable() {
     const wishTableList = wishData.map((item, idx) => {
         return (
             <tr key={idx}>
-                <td className="product-thumbnail"><Link to={`/productdetail/${item.id}`}><img className="img-fluid" src={item.image[0]} alt="/" /></Link></td>
-                <td className="product-name text-center"><Link to={`/productdetail/${item.id}`}>{item.name}</Link></td>
+                <td className="product-thumbnail"><Link to={`/products/${item.id}`}><img className="img-fluid" src={item.image[0]} alt="/" /></Link></td>
+                <td className="product-name text-center"><Link to={`/products/${item.id}`}>{item.name}</Link></td>
                 <td className="product-price-cart"><span className="amount old">{item.price}</span><span className="amount">{(item.price * ((100 + item.discount) / 100)).toFixed(2)}</span></td>
-                <td className="product-wishlist-cart"><Link to={`/productdetail/${item.id}`}>Select option</Link></td>
+                <td className="product-wishlist-cart"><Link to={`/products/${item.id}`}>Select option</Link></td>
                 <td className="product-remove"><button onClick={() => { handleWishDelete(item.id) }}><i className="fa fa-times"></i></button></td>
             </tr>
         )

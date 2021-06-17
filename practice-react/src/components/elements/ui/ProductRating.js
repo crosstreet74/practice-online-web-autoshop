@@ -9,13 +9,13 @@ const ProductRating = ({ rateValue }) => {
     }
     if (rateValue && rateValue > 0) {
         for (let i = 0; i <= rateValue - 1; i++) {
-            rating[i] = <i className="fas fa-star coloredStar" key={i}></i>
+            rating[i] = <i className="fas fa-star yellow" key={i}></i>
         }
     }
     return (
-        <Fragment>
+        <div className="product-rating">
             {rating}
-        </Fragment>
+        </div>
     );
 }
 

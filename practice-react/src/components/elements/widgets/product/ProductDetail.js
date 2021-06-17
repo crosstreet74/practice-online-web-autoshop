@@ -30,7 +30,7 @@ export default function ItemDetail() {
                 breadName={productData.name}
                 productId={productData.id}
                 productName={productData.name}
-                productUrl={`/productdetail/${productData.id}`}
+                productUrl={`/products/${productData.id}`}
             />
             <ProductTop
                 productData={productData}
