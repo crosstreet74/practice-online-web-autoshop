@@ -1,86 +1,88 @@
-[
-    {
-        "item_id": 1,
-        "type": [
-            "Sedan",
-            "Sports"
-        ],
-        "model": "Stinger",
-        "brand": "Kia",
-        "price": "38.5",
-        "discount": 10,
-        "mileage": "9-11 km/l",
-        "rating": 5,
-        "item_img": "https://cdn.motor1.com/images/mgl/WpVBq/s4/2021-kia-stinger.jpg"
-    },
-    {
-        "item_id": 2,
-        "type": [
-            "Sports",
-            "SUV"
-        ],
-        "model": "Cayenne",
-        "brand": "Porsche",
-        "price": "112.2",
-        "discount": 10,
-        "mileage": "6-7 km/l",
-        "rating": 4,
-        "item_img": "assets/data/img/catalog-kia_stinger.jpg"
-    },
-    {
-        "item_id": 3,
-        "type": [
-            "Coupe",
-            "Sports"
-        ],
-        "model": "GT 4-Door Coupe",
-        "brand": "Mercedes-Benz",
-        "price": "100.4",
-        "discount": 10,
-        "mileage": "8-9 km/l",
-        "rating": 5,
-        "item_img": "assets/data/img/catalog-kia_stinger.jpg"
-    },
-    {
-        "item_id": 4,
-        "type": [
-            "SUV",
-            "Utility"
-        ],
-        "model": "Renegade Longitude",
-        "brand": "Jeep",
-        "price": "36.1",
-        "discount": 10,
-        "mileage": "9-10 km/l",
-        "rating": 3,
-        "item_img": "assets/data/img/catalog-kia_stinger.jpg"
-    },
-    {
-        "item_id": 5,
-        "type": [
-            "SUV",
-            "Luxury"
-        ],
-        "model": "Range Rover",
-        "brand": "Land Rover",
-        "price": "10.6",
-        "discount": 10,
-        "mileage": "9-10 km/l",
-        "rating": 2,
-        "item_img": "assets/data/img/catalog-kia_stinger.jpg"
-    },
-    {
-        "item_id": 6,
-        "type": [
-            "City",
-            "Subcompact"
-        ],
-        "model": "Spark",
-        "brand": "Chevrolet",
-        "price": "36.1",
-        "discount": 10,
-        "mileage": "18 km/l",
-        "rating": 2,
-        "item_img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.carscoops.com%2Fwp-content%2Fuploads%2F2020%2F06%2F2021-Chevrolet-Spark-Korean-spec-11.jpg&f=1&nofb=1"
-    }
-]
+{
+    "items": [
+        {
+            "item_id": 1,
+            "type": [
+                "Sedan",
+                "Sports"
+            ],
+            "model": "Stinger",
+            "brand": "Kia",
+            "price": "38.5",
+            "discount": 10,
+            "mileage": "9-11 km/l",
+            "rating": 5,
+            "item_img": "https://cdn.motor1.com/images/mgl/WpVBq/s4/2021-kia-stinger.jpg"
+        },
+        {
+            "item_id": 2,
+            "type": [
+                "Sports",
+                "SUV"
+            ],
+            "model": "Cayenne",
+            "brand": "Porsche",
+            "price": "112.2",
+            "discount": 10,
+            "mileage": "6-7 km/l",
+            "rating": 4,
+            "item_img": "assets/data/img/catalog-kia_stinger.jpg"
+        },
+        {
+            "item_id": 3,
+            "type": [
+                "Coupe",
+                "Sports"
+            ],
+            "model": "GT 4-Door Coupe",
+            "brand": "Mercedes-Benz",
+            "price": "100.4",
+            "discount": 10,
+            "mileage": "8-9 km/l",
+            "rating": 5,
+            "item_img": "assets/data/img/catalog-kia_stinger.jpg"
+        },
+        {
+            "item_id": 4,
+            "type": [
+                "SUV",
+                "Utility"
+            ],
+            "model": "Renegade Longitude",
+            "brand": "Jeep",
+            "price": "36.1",
+            "discount": 10,
+            "mileage": "9-10 km/l",
+            "rating": 3,
+            "item_img": "assets/data/img/catalog-kia_stinger.jpg"
+        },
+        {
+            "item_id": 5,
+            "type": [
+                "SUV",
+                "Luxury"
+            ],
+            "model": "Range Rover",
+            "brand": "Land Rover",
+            "price": "10.6",
+            "discount": 10,
+            "mileage": "9-10 km/l",
+            "rating": 2,
+            "item_img": "assets/data/img/catalog-kia_stinger.jpg"
+        },
+        {
+            "item_id": 6,
+            "type": [
+                "City",
+                "Subcompact"
+            ],
+            "model": "Spark",
+            "brand": "Chevrolet",
+            "price": "36.1",
+            "discount": 10,
+            "mileage": "18 km/l",
+            "rating": 2,
+            "item_img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.carscoops.com%2Fwp-content%2Fuploads%2F2020%2F06%2F2021-Chevrolet-Spark-Korean-spec-11.jpg&f=1&nofb=1"
+        }
+    ]
+}

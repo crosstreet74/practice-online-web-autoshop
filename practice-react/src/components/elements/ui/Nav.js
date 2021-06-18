@@ -1,18 +1,39 @@
-import NavMenu from "./NavMenu"
-import SideMenu from "./SideMenu"
+import React, { useState, useEffect } from 'react';
+import Logo from './HeaderLogo';
+import Menu from './Menu';
+import SideMenu from './SideMenu';
 
 export default function Nav() {
+
+    const [scroll, setScroll] = useState(0);
+    // console.log(scroll);
+    useEffect(() => {
+        //const header = document.querySelector(".sticky-bar");
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
+
+    const handleScroll = () => {
+        setScroll(window.scrollY);
+    }
+
+
     return (
-
-        <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom"
-            style={{ padding: 0, backgroundColor: "gainsboro" }}>
-
-            <div id="logo" className="d-flex align-items-center col-md-2 mb-2 mb-md-0 px-4 text-decoration-none">
-                logo
+        <div className={
+            scroll ? "header-padding-1 sticky-bar header-res-padding clearfix stick"
+                : "header-padding-1 header-res-padding clearfix stick"
+        }
+        >
+            <div className="container-fluid">
+                <div className="row">
+                    <Logo />
+                    <Menu />
+                    <SideMenu />
+                </div>
             </div>
 
-            <NavMenu></NavMenu>
-            <SideMenu></SideMenu>
-        </header>
-    )
+        </div>
+    );
 }

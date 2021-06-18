@@ -27,12 +27,15 @@ body {
 }
 
 .featTitle {
-    font-size: 2rem;
-}
+    font-size: 1.5rem;
+} 
+
+/* Section id deal */
 
 #deal .title h3{
     font-size: 2rem;
-    color: coral;
+    color:coral;
+    text-align: center;
 }
 
 #deal ul li {
@@ -45,7 +48,7 @@ body {
     padding-right: 0px;
 }
 
-.modelImg {
+.product-img {
     width:100%;
     height:400px;
     background-color: slategray;

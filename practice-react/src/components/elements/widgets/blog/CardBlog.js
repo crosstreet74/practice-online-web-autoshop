@@ -5,8 +5,8 @@ import data from "../../../../assets/data/blog.json"
 export default function CardBrand() {
     const [blogData, setBlogData] = useState(data)
 
-    const blogList = blogData.map(item => (
-        <div className="col-12 col-md-4 align-items-center">
+    const blogList = blogData.map((item, id) => (
+        <div key={id} className="col-12 col-md-4 align-items-center">
             <Link to={`/blog_article/${item.id}`}>
                 <div className="blogImage" style={{ backgroundImage: `url(${item.image})`, backgroundSize: "cover" }}></div>
             </Link>

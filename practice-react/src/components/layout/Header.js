@@ -1,11 +1,12 @@
-import Banner from "../elements/ui/Banner"
 import Nav from "../elements/ui/Nav"
+import HeaderTop from "../elements/ui/HeaderTop"
+
 
 export default function Header() {
     return (
-        <div className="container-fluid px-0">
-            <Nav></Nav>
-            <Banner></Banner>
-        </div>
+        <header className="header-area clearfix">
+            <HeaderTop />
+            <Nav />
+        </header>
     )
 }
