@@ -2,6 +2,7 @@ import React from 'react';
 import AccountEdit from './AccountEdit'
 import PswdChange from './PswdChange'
 import AddressModify from './AddressModify'
+import SignUp from './SignUp';
 
 export default function AccountContainer() {
     return (
@@ -11,6 +12,7 @@ export default function AccountContainer() {
                     <div class="ml-auto mr-auto col-lg-9">
                         <div class="myaccount-wrapper">
                             <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <SignUp/>
                                 <AccountEdit />
                                 <PswdChange />
                                 <AddressModify />

@@ -19,21 +19,24 @@ import Compare from './components/pages/Compare/Compare';
 import Shop from './components/pages/Shop/Shop';
 import MyAccount from './components/pages/MyAccount/MyAccount';
 import ProductDetail from './components/elements/widgets/product/ProductDetail';
+import ScrollToTop from './utilities/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/"><Home/></Route>
-        <Route exact path="/products/:id"><ProductDetail/></Route>
-        <Route exact path="/cart"><Cart/></Route>
-        <Route exact path="/wishlist"><Wishlist/></Route>
-        <Route exact path="/compare"><Compare/></Route>
-        <Route exact path="/myaccount"><MyAccount/></Route>
-        <Route exact path="/about"><About/></Route>
-        <Route exact path="/shop"><Shop/></Route>
-        <Route exact path="/faqs"></Route>
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route exact path="/products/:id"><ProductDetail /></Route>
+          <Route exact path="/cart"><Cart /></Route>
+          <Route exact path="/wishlist"><Wishlist /></Route>
+          <Route exact path="/compare"><Compare /></Route>
+          <Route exact path="/myaccount"><MyAccount /></Route>
+          <Route exact path="/about"><About /></Route>
+          <Route exact path="/shop"><Shop /></Route>
+          <Route exact path="/faqs"></Route>
+        </Switch>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

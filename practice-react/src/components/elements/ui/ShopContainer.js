@@ -3,6 +3,7 @@ import ShopSideBar from '../widgets/shop/ShopSideBar'
 import ShopTopBar from '../widgets/shop/ShopTopBar'
 import ShopItem from '../widgets/shop/ShopItem'
 
+// TODO: let 'all category' selected default
 export default function ShopContainer() {
 
     const [columnNum, setColumnNum] = useState(4)
@@ -10,7 +11,7 @@ export default function ShopContainer() {
     const [itemData, setItemData] = useState([])
     const [filteredData, setFilteredData] = useState([])
     // const [pageNum, setPageNum] = useState(0)
-    const [category, setCategory] = useState([])
+    const [category, setCategory] = useState(['all category'])
 
     let process = require('../../../assets/config/myProcess.json')
 
@@ -38,7 +39,7 @@ export default function ShopContainer() {
     useEffect(() => {
         setFilteredData(() => {
             console.log(category)
-            if (category.length === 0 || category == 'all category')
+            if (typeof (category) == undefined || category.includes('all category'))
                 return (itemData)
             else
                 return (
